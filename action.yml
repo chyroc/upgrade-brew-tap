@@ -1,4 +1,4 @@
-name: 'Container Action Template'
+name: 'upgrade-brew-tap'
 description: 'Get started with Container actions'
 author: 'GitHub'
 inputs: 

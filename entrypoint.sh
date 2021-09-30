@@ -23,7 +23,7 @@ echo "::set-output name=tag::$tag"
 echo "::set-output name=checksum::$checksum"
 echo "::set-output name=tap_repo::$tap_repo"
 
-git clone "https://github.com/chyroc/$tap_repo" "/tmp/$tap_repo"
+git clone "https://github.com/$tap_repo" "/tmp/$tap_repo"
 cd /tmp/$tap_repo
 echo '# x' >> ./Formula/dl.rb
 git commit -a -m "commit"

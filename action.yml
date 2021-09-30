@@ -2,9 +2,8 @@ name: 'upgrade-brew-tap'
 description: 'Get started with Container actions'
 author: 'GitHub'
 inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+  name:
+    description: 'brew tap name'
 runs:
   using: 'docker'
   image: 'Dockerfile'

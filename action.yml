@@ -4,6 +4,8 @@ author: 'GitHub'
 inputs: 
   name:
     description: 'brew tap name'
+  tap_repo:
+    description: 'brew tap repo'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -24,6 +24,7 @@ jobs:
         uses: "./"
         with:
           name: "otp-cli"
+          tap_repo: "chyroc/homebrew-tap"
 #      -
 #        name: Run GoReleaser
 #        uses: goreleaser/goreleaser-action@v2

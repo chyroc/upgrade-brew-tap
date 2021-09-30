@@ -4,12 +4,8 @@ set -ex
 
 env
 
-ls -alh
+tag="${GITHUB_REF#refs/*/}"
 
-cd /prj
-
-ls -alh
-
-/usr/local/go/bin/go run main.go
+echo "tag: $tag"
 
 echo "hello $1"

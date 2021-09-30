@@ -8,6 +8,7 @@ tag_v="${GITHUB_REF#refs/*/}"
 tag="0.3.0" # `echo $tag_v | cut -c2-`
 name="$INPUT_NAME"
 tap_repo="$INPUT_TAP_REPO"
+token="$INPUT_TOKEN"
 repo="chyroc/otp-cli" # "$GITHUB_REPOSITORY"
 
 checksum_url="https://github.com/$repo/releases/download/v$tag/checksums.txt"
@@ -23,7 +24,7 @@ echo "::set-output name=tag::$tag"
 echo "::set-output name=checksum::$checksum"
 echo "::set-output name=tap_repo::$tap_repo"
 
-git clone "https://chyroc:$GITHUB_TOKEN@github.com/$tap_repo" "/tmp/$tap_repo"
+git clone "https://username:$token@github.com/$tap_repo" "/tmp/$tap_repo"
 git config --global user.name 'github-actions[bot]'
 git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 cd /tmp/$tap_repo

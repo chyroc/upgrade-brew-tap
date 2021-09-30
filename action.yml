@@ -6,6 +6,8 @@ inputs:
     description: 'brew tap name'
   tap_repo:
     description: 'brew tap repo'
+  token:
+    description: 'github token for write tap repo'
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -25,6 +25,7 @@ jobs:
         with:
           name: "otp-cli"
           tap_repo: "chyroc/homebrew-tap"
+          token: ${{ secrets.TAP_TOKEN }}
 #      -
 #        name: Run GoReleaser
 #        uses: goreleaser/goreleaser-action@v2

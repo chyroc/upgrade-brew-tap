@@ -6,7 +6,5 @@ inputs:
     description: 'Input to use'
     default: 'world'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.myInput }}
+  using: shell
+  entrypoint: "entrypoint.sh"

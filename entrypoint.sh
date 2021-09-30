@@ -15,3 +15,7 @@ checksum=`curl -sL $checksum_url | grep $name-$tag.tar.gz | cut -d ' '  -f 1-1 |
 echo "tag: $tag"
 echo "checksum: $checksum"
 echo "name: $name"
+
+echo "::set-output name=name::$name"
+echo "::set-output name=tag::$tag"
+echo "::set-output name=checksum::$checksum"

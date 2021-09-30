@@ -24,11 +24,14 @@ echo "::set-output name=tag::$tag"
 echo "::set-output name=checksum::$checksum"
 echo "::set-output name=tap_repo::$tap_repo"
 
+rm -rf "/tmp/$tap_repo" || echo ""
 git clone "https://username:$token@github.com/$tap_repo" "/tmp/$tap_repo"
 cd /tmp/$tap_repo
 
-sed "s#^  url.*#  url \"https://github.com/$repo/releases/download/v$tag/$name-$tag.tar.gz\"#" "./Formula/$name.rb" > "./Formula/$name.rb"
-sed "s#^  sha256.*#  sha256 \"$checksum\"#" "./Formula/$name.rb" > "./Formula/$name.rb"
+sed "s#^  url.*#  url \"https://github.com/$repo/releases/download/v$tag/$name-$tag.tar.gz\"#" "./Formula/$name.rb" > a.txt
+mv a.txt "./Formula/$name.rb"
+sed "s#^  sha256.*#  sha256 \"$checksum\"#" "./Formula/$name.rb" > b.txt
+mv b.txt "./Formula/$name.rb"
 
 git config --global user.name 'github-actions[bot]'
 git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'

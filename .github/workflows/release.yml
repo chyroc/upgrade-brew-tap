@@ -23,7 +23,7 @@ jobs:
         name: Run Update-brew-tap
         uses: "./"
         with:
-          myInput: "1.17"
+          name: "otp-cli"
 #      -
 #        name: Run GoReleaser
 #        uses: goreleaser/goreleaser-action@v2

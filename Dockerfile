@@ -1,9 +1,9 @@
 FROM golang:1.17
 
-COPY LICENSE README.md /
+ADD . /prj
 
 RUN ls -alh
 
-COPY entrypoint.sh /entrypoint.sh
+RUN ls -alh /prj
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/prj/entrypoint.sh"]

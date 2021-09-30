@@ -23,7 +23,7 @@ echo "::set-output name=tag::$tag"
 echo "::set-output name=checksum::$checksum"
 echo "::set-output name=tap_repo::$tap_repo"
 
-git clone "https://user:$GITHUB_TOKEN@github.com/$tap_repo" "/tmp/$tap_repo"
+git clone "https://chyroc:$GITHUB_TOKEN@github.com/$tap_repo" "/tmp/$tap_repo"
 git config --global user.name 'github-actions[bot]'
 git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 cd /tmp/$tap_repo

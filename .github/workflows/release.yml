@@ -21,7 +21,7 @@ jobs:
           go-version: 1.17
       -
         name: Set up Go
-        uses: "#SELF#"
+        uses: "./Dockerfile"
         with:
           myInput: "1.17"
 #      -
